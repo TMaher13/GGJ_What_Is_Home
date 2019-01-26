@@ -90,7 +90,7 @@ GameObject:
   - component: {fileID: 114293306701742802}
   - component: {fileID: 114316204061143542}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: Dialogue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
