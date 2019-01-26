@@ -4,55 +4,32 @@ using UnityEngine;
 
 public class Player : Monobehaviour {
 
-  //public float speed;
-  //public float jumpForce;
   private float moveInput;
 
   // for flipping
-  private bool facingRight = true;
 
   // variables to deal with player body
   private Rigidbody2D rb;
   public SpriteRenderer sr; //drag and drop the sprite rendere of your player from inscpector to the script.
 
-  // variables to help with jumping
-  //private bool isGrounded;
-  //public Transform groundCheck;
-  //public float checkRadius;
-  //public LayerMask whatIsGround;
+  private Vector3 pos; // For movement
+  private float speed = 2.0f; // Speed of movement
 
-  //public int extraJumps;
+     void Start () {
+         pos = transform.position; // Take the initial position
+     }
 
-  void start() {
-    rb = GetComponent<Rigidbody2D>(); // get Rigidbody of player
-  }
+     void FixedUpdate () {
+         if(Input.GetKey(KeyCode.A) && transform.position == pos) // Left
+             pos += Vector3.left;
+         if(Input.GetKey(KeyCode.D) && transform.position == pos) // Right
+             pos += Vector3.right;
+         if(Input.GetKey(KeyCode.W) && transform.position == pos) // Up
+             pos += Vector3.up;
+         if(Input.GetKey(KeyCode.S) && transform.position == pos) // Down
+             pos += Vector3.down;
 
-  void FixedUpdate() {
-    // Check if player is on the ground
-    isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, whatIsGround);
-
-
-    //moveInput = Input.GetAxis("Horizontal");
-    if (Input.GetKeyDown(KeyCode.W))
-         pos.y += spacing;
-     if (Input.GetKeyDown(KeyCode.S))
-         pos.y -= spacing;
-     if (Input.GetKeyDown(KeyCode.A)) {
-         pos.x -= spacing;
-         sr.flipX = true;
-       }
-     if (Input.GetKeyDown(KeyCode.D)) {
-         pos.x += spacing;
-         sr.flipX = false;
-       }
-
-
-    // Update velocity based on key-press
-    rb.velocity = new Vector2(moveInput*speed, rb.velocity.y);
-  }
-
-  void update() {
-
-  }
+         transform.position = Vector3.MoveTowards(transform.position, pos, Time.deltaTime * speed);    // Move there
+     }
 
 }
