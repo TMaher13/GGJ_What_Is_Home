@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour {
 
-  private float moveInput;
+  public float moveSpeed;
 
   // for flipping
 
   // variables to deal with player body
   private Rigidbody2D rb;
-  public SpriteRenderer sr; //drag and drop the sprite rendere of your player from inscpector to the script.
+  //public SpriteRenderer sr; //drag and drop the sprite rendere of your player from inscpector to the script.
 
   private Vector3 pos; // For movement
   private float speed = 2.0f; // Speed of movement
@@ -22,11 +22,11 @@ public class PlayerController : MonoBehaviour {
   void FixedUpdate () {
     if(Input.GetKey(KeyCode.A) && transform.position == pos) {// Left
       pos += Vector3.left;
-      sr.flipX = true;
+      //sr.flipX = true;
     }
     if(Input.GetKey(KeyCode.D) && transform.position == pos) { // Right
       pos += Vector3.right;
-      sr.flipX = false;
+      //sr.flipX = false;
     }
     if(Input.GetKey(KeyCode.W) && transform.position == pos) // Up
       pos += Vector3.up;
