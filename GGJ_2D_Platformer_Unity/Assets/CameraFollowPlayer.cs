@@ -1,19 +1,12 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class followPlayer : MonoBehaviour {
+public class CameraFollowPlayer : MonoBehaviour {
 
-  public GameObject player;
-  private Vector3 offset;
+  public Transform player;
 
-  // Use this for initialization
-  void Start () {
-    offset = transform.position - player.transform.position;
-  }
-
-  // Update is called once per frame
-  void LateUpdate () {
-    transform.position = player.transform.position + offset;
+  void Update() {
+    transform.position = new Vector3(player.position.x, player.position.y, -10); // Camera follows the player but 6 to the right
   }
 }
