@@ -27,7 +27,7 @@ public class GoToDodgeball : MonoBehaviour {
       // Wait until they press space
       while(!Input.GetKeyDown(KeyCode.Space)) {};
 
-      SceneManager.LoadScene("DodgeballGame");
+      //SceneManager.LoadScene("DodgeballGame");
     }
     else
       dMan.ShowBox("Jimmy: Did you talk to Billy to get your item back?");
