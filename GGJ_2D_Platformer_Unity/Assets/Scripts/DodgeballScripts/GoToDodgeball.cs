@@ -29,7 +29,7 @@ public class GoToDodgeball : MonoBehaviour {
       // Wait until they press space
       while(!Input.GetKeyDown(KeyCode.Space)) {};
 
-      SceneManager.LoadScene("DodgeballGame");
+      //SceneManager.LoadScene("DodgeballGame");
     }
   }
 }

@@ -24,9 +24,13 @@ public class DogController : MonoBehaviour
         destPoint = 0;
         currentPoint = points[destPoint];
 
-        GotoNextPoint();
+        //GotoNextPoint();
     }
 
+    private void Update()
+    {
+        GotoNextPoint();
+    }
 
     void GotoNextPoint()
     {
@@ -43,7 +47,7 @@ public class DogController : MonoBehaviour
         // choose next point, or cycle through
         //destPoint = (destPoint + 1) % points.Length;
 
-        if(Vector3.Distance(transform.position, currentPoint.position) <.1f)
+        if (Vector3.Distance(transform.position, currentPoint.position) < .1f)
         {
             if (destPoint + 1 < points.Length)
             {
@@ -59,14 +63,11 @@ public class DogController : MonoBehaviour
         Vector3 pointDir = currentPoint.position - transform.position;
         float angle = Mathf.Atan2(pointDir.y, pointDir.x) * Mathf.Rad2Deg - 90f;
         Quaternion q = Quaternion.AngleAxis(angle, Vector3.forward);
-        transform.rotation = Quaternion.RotateTowards(transform.rotation, q, 180f);
+        transform.rotation = Quaternion.RotateTowards(transform.rotation, q, 10f);
     }
 
-
-    void Update()
+    void stopMoving()
     {
-        // choose the next point as the dog gets close to the first point
-        //if (!agent.pathPending && agent.remainingDistance < 0.5f)
-        //  GotoNextPoint();
+        speed = 0;
     }
 }
