@@ -4,6 +4,11 @@ using UnityEngine.EventSystems;
 using UnityEngine;
 using UnityEngine.UI;
 
+/*
+Thomas Maher
+1/25/2019
+*/
+
 public class NPCisCLicked : MonoBehaviour {
 
   public string dialogue;

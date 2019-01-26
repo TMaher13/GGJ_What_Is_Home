@@ -3,6 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+/*
+Thomas Maher
+1/25/2019
+*/
+
 public class DialogueController : MonoBehaviour {
 
   public GameObject dBox;
