@@ -12,6 +12,8 @@ public class PlayerController : MonoBehaviour {
   public float moveSpeed;
   public Vector2 lastMove;
 
+  //private Vector3 pos;
+
   public int progress;
 
   // static in Unity is a powerful & beautiful thing
@@ -24,15 +26,16 @@ public class PlayerController : MonoBehaviour {
     //anim = GetComponent<Animator>();
     rb = GetComponent<Rigidbody2D>();
     progress = 0;
+    //pos = transform.position;
 
-    if(!playerExists) {
+    /*if(!playerExists) {
       playerExists = true;
       // So that player exists when switching between scenes/levels
       DontDestroyOnLoad(transform.gameObject);
     }
     else { // To destroy duplicates
       Destroy(gameObject);
-    }
+    }*/
   }
 
   /*
@@ -44,15 +47,17 @@ public class PlayerController : MonoBehaviour {
 
     // Basic movement of player
     if(Input.GetAxisRaw("Horizontal") > 0.5f || Input.GetAxisRaw("Horizontal") < -0.5f) {
-      rb.velocity = new Vector2(Input.GetAxisRaw("Horizontal")*moveSpeed, rb.velocity.y);
-      isMoving = true;
-      lastMove = new Vector2(0f, Input.GetAxisRaw("Horizontal"));
+      //rb.velocity = new Vector2(Input.GetAxisRaw("Horizontal")*moveSpeed, rb.velocity.y);
+      //isMoving = true;
+      //lastMove = new Vector2(0f, Input.GetAxisRaw("Horizontal"));
+      transform.Translate(new Vector3(Input.GetAxisRaw("Horizontal")*moveSpeed*Time.deltaTime, 0f, 0f));
     }
 
     if(Input.GetAxisRaw("Vertical") > 0.5f || Input.GetAxisRaw("Vertical") < -0.5f) {
-      rb.velocity = new Vector2(rb.velocity.x, Input.GetAxisRaw("Vertical")*moveSpeed);
-      isMoving = true;
-      lastMove = new Vector2(0f, Input.GetAxisRaw("Vertical"));
+      //rb.velocity = new Vector2(rb.velocity.x, Input.GetAxisRaw("Vertical")*moveSpeed);
+      //isMoving = true;
+      //lastMove = new Vector2(0f, Input.GetAxisRaw("Vertical"));
+      transform.Translate(new Vector3(0f, Input.GetAxisRaw("Vertical")*moveSpeed*Time.deltaTime, 0f));
     }
 
     // So player doesn't keep sliding
@@ -77,22 +82,23 @@ public class PlayerController : MonoBehaviour {
   /*void FixedUpdate () {
     if(Input.GetKey(KeyCode.A) && transform.position == pos) {// Left
       //pos += Vector3.left;
-      transform.Translate(Vector2.left*speed*Time.deltaTime);
+      transform.Translate(Vector2.left*moveSpeed*Time.deltaTime);
     }
     if(Input.GetKey(KeyCode.D) && transform.position == pos) { // Right
       //pos += Vector3.right;
-      transform.Translate(Vector2.right*speed*Time.deltaTime);
+      transform.Translate(Vector2.right*moveSpeed*Time.deltaTime);
     }
     if(Input.GetKey(KeyCode.W) && transform.position == pos) { // Up
       //pos += Vector3.up;
-      transform.Translate(Vector2.up*speed*Time.deltaTime);
+      transform.Translate(Vector2.up*moveSpeed*Time.deltaTime);
     }
     if(Input.GetKey(KeyCode.S) && transform.position == pos) { // Down
       //pos += Vector3.down;
-      transform.Translate(Vector2.down*speed*Time.deltaTime);
+      transform.Translate(Vector2.down*moveSpeed*Time.deltaTime);
     }
 
-    //transform.position = Vector3.MoveTowards(transform.position, pos, Time.deltaTime * speed);    // Move there
+    transform.position = Vector3.MoveTowards(transform.position, pos, Time.deltaTime * moveSpeed);    // Move there
+    pos = transform.position;
   }*/
 
 }
