@@ -1,10 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 /*
 Thomas Maher
 1/26/2019
+
+Create gameObject and set trigger on
 */
 
 public class LoadNewScene : MonoBehaviour {
@@ -19,7 +22,7 @@ public class LoadNewScene : MonoBehaviour {
   void OnTriggerEnter2D(Collider2D other) {
 
     if(other.gameObject.name == "Player") {
-      Application.LoadLevel(newScene);
+      SceneManager.LoadScene(newScene);
     }
   }
 }

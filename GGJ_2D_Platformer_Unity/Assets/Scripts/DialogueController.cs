@@ -17,7 +17,8 @@ public class DialogueController : MonoBehaviour {
 
   // Use this for initialization
   void Start () {
-    dialogueActive = true;
+    dBox.SetActive(false);
+    dialogueActive = false;
   }
 
   // Update is called once per frame
