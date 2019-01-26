@@ -1,12 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GoToDodgeball : MonoBehaviour {
 
-  private string dialogue;
-  private string defaultMessage;
   private DialogueController dMan;
+  private PlayerController player;
 
   // Which stage the player is at in the game
   public static int progress;
@@ -14,22 +14,23 @@ public class GoToDodgeball : MonoBehaviour {
   // Use this for initialization
   void Start () {
     dMan = FindObjectOfType<DialogueController>();
-
-    defaultMessage = "I hear Mrs. Lavery is having a yard sale!";
-    dialogue = "I have something of yours! If you want it, you have to beat us in dodgeball!";
+    player = FindObjectOfType<PlayerController>();
   }
 
   void OnMouseDown() {
 
-    if(progress < 3)
-      dMan.ShowBox(defaultMessage);
-    else {
-      dMan.ShowBox(dialogue);
+    if(player.progress < 3)
+      dMan.ShowBox("Jimmy: I hear Mrs. Lavery is having a yard sale!");
+    else if(player.progress == 3) {
+      dMan.ShowBox("Jimmy: I have something of yours! If you want it, you have to beat us in dodgeball!");
 
       // Wait until they press space
       while(!Input.GetKeyDown(KeyCode.Space)) {};
 
       SceneManager.LoadScene("DodgeballGame");
     }
+    else
+      dMan.ShowBox("Jimmy: Did you talk to Billy to get your item back?");
+
   }
 }

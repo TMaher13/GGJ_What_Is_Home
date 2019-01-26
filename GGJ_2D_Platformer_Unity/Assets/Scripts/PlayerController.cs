@@ -12,6 +12,8 @@ public class PlayerController : MonoBehaviour {
   public float moveSpeed;
   public Vector2 lastMove;
 
+  public int progress;
+
   // static in Unity is a powerful & beautiful thing
   private static bool playerExists;
 
@@ -21,7 +23,7 @@ public class PlayerController : MonoBehaviour {
   void Start () {
     //anim = GetComponent<Animator>();
     rb = GetComponent<Rigidbody2D>();
-    //pos = transform.position; // Take the initial position
+    progress = 0;
 
     if(!playerExists) {
       playerExists = true;
