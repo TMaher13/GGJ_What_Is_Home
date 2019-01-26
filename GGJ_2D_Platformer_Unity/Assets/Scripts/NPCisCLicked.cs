@@ -31,7 +31,7 @@ public class NPCisCLicked : MonoBehaviour {
   void OnMouseDown() {
 
     if(isDefault)
-       dMan.ShowBox(defaultMessage);
+      dMan.ShowBox(defaultMessage);
     else
       dMan.ShowBox(dialogue);
   }

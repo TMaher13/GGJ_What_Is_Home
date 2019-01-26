@@ -18,9 +18,6 @@ public class PlayerController : MonoBehaviour {
   private Rigidbody2D rb;
   //private Animator anim;
 
-  //private Vector3 pos; // For movement
-  //private float speed = 2.0f; // Speed of movement
-
   void Start () {
     //anim = GetComponent<Animator>();
     rb = GetComponent<Rigidbody2D>();
