@@ -23,7 +23,7 @@ public class LoadNewScene : MonoBehaviour {
   Make sure Scenes are in Build
   */
 
-  void start() {
+  void Start() {
     player = FindObjectOfType<PlayerController>();
   }
 

@@ -15,8 +15,8 @@ public class CameraController : MonoBehaviour {
   private Vector3 playerPos;
   public float moveSpeed; // How fast we want camera to move. 5 is roughly a good value (maybe a little less)
 
-  void start() {
-    //DontDestroyOnLoad(transform.gameObject);
+  void Start() {
+    DontDestroyOnLoad(transform.gameObject);
 
     if(!cameraExists) {
       cameraExists = true;
