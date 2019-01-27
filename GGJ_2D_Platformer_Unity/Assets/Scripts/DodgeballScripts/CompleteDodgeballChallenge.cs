@@ -3,35 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-/*
-Thomas Maher
-1/26/2019
-
-Create gameObject and set trigger on
-*/
-
-public class LoadNewScene : MonoBehaviour {
-
-  public string newScene;
-
-  public string exitPoint;
+public class CompleteDodgeballChallenge : MonoBehaviour {
 
   private PlayerController player;
-
-  /*
-  File => Build Settings
-  Make sure Scenes are in Build
-  */
 
   void start() {
     player = FindObjectOfType<PlayerController>();
   }
 
   void OnTriggerEnter2D(Collider2D other) {
-
     if(other.gameObject.name == "Player") {
-      SceneManager.LoadScene(newScene);
-      player.startPoint = exitPoint;
+      player.progress++; // update player progress
+      SceneManager.LoadScene("Neighborhood");
     }
   }
 }
