@@ -23,7 +23,7 @@ public class LoadNewScene : MonoBehaviour {
   Make sure Scenes are in Build
   */
 
-  void start() {
+  void Start() {
     player = FindObjectOfType<PlayerController>();
   }
 
@@ -32,6 +32,7 @@ public class LoadNewScene : MonoBehaviour {
     if(other.gameObject.name == "Player") {
       SceneManager.LoadScene(newScene);
       player.startPoint = exitPoint;
+      Debug.Log(player.startPoint);
     }
   }
 }

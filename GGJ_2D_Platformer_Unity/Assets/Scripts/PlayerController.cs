@@ -75,27 +75,4 @@ public class PlayerController : MonoBehaviour {
     */
   }
 
-
-  /*void FixedUpdate () {
-    if(Input.GetKey(KeyCode.A) && transform.position == pos) {// Left
-      //pos += Vector3.left;
-      transform.Translate(Vector2.left*moveSpeed*Time.deltaTime);
-    }
-    if(Input.GetKey(KeyCode.D) && transform.position == pos) { // Right
-      //pos += Vector3.right;
-      transform.Translate(Vector2.right*moveSpeed*Time.deltaTime);
-    }
-    if(Input.GetKey(KeyCode.W) && transform.position == pos) { // Up
-      //pos += Vector3.up;
-      transform.Translate(Vector2.up*moveSpeed*Time.deltaTime);
-    }
-    if(Input.GetKey(KeyCode.S) && transform.position == pos) { // Down
-      //pos += Vector3.down;
-      transform.Translate(Vector2.down*moveSpeed*Time.deltaTime);
-    }
-
-    transform.position = Vector3.MoveTowards(transform.position, pos, Time.deltaTime * moveSpeed);    // Move there
-    pos = transform.position;
-  }*/
-
 }

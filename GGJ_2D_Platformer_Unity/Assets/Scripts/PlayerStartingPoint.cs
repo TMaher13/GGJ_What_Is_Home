@@ -22,8 +22,10 @@ public class PlayerStartingPoint : MonoBehaviour {
   void Start () {
     // move player to position of start point
     player = FindObjectOfType<PlayerController>();
-
+    Debug.Log(player.startPoint);
+    Debug.Log(pointName);
     if(player.startPoint == pointName) {
+      Debug.Log(transform.position);
       player.transform.position = transform.position;
 
       // Fix starting position depending on the starting block for each scene
