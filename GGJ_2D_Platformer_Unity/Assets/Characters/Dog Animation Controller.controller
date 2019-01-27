@@ -8,13 +8,13 @@ AnimatorController:
   m_Name: Dog Animation Controller
   serializedVersion: 5
   m_AnimatorParameters:
-  - m_Name: MoveX
+  - m_Name: DogMoveX
     m_Type: 1
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
-  - m_Name: LastMoveX
+  - m_Name: DogLastMoveX
     m_Type: 1
     m_DefaultFloat: 0
     m_DefaultInt: 0
@@ -62,7 +62,7 @@ BlendTree:
     m_CycleOffset: 0
     m_DirectBlendParameter: MoveX
     m_Mirror: 0
-  m_BlendParameter: LastMoveX
+  m_BlendParameter: DogLastMoveX
   m_BlendParameterY: LastMoveY
   m_MinThreshold: 0.33333334
   m_MaxThreshold: 0.6666666
@@ -92,7 +92,7 @@ BlendTree:
     m_CycleOffset: 0
     m_DirectBlendParameter: MoveX
     m_Mirror: 0
-  m_BlendParameter: MoveX
+  m_BlendParameter: DogMoveX
   m_BlendParameterY: MoveY
   m_MinThreshold: 0.33333334
   m_MaxThreshold: 1

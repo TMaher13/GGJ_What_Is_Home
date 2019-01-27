@@ -7,63 +7,117 @@ using UnityEngine.AI;
 public class DogController : MonoBehaviour
 {
 
-    public Transform[] points;
-    private int destPoint;
+    //public Transform[] points;
+    //private int destPoint;
     //private NavMeshAgent agent;
     public float speed;
-    Transform currentPoint;
+    //Transform currentPoint;
+    private Animator anim;
+    public Vector2 lastMove;
+    private bool isMoving;
 
+    private char tagChar;
+
+    public bool isFound;
 
     void Start()
     {
+      anim = GetComponent<Animator>();
         //agent = GetComponent<NavMeshAgent>();
+      isFound = false;
+      tagChar = '1';
 
         // makes continuous movement
         //agent.autoBraking = false;
 
-        destPoint = 0;
-        currentPoint = points[destPoint];
+        //destPoint = 0;
+        //currentPoint = points[destPoint];
 
         //GotoNextPoint();
     }
 
     private void Update()
     {
-        GotoNextPoint();
+      if(!isFound) {
+        isMoving = true;
+        switch(tagChar) {
+          case '1':
+            transform.position = Vector3.MoveTowards(transform.position, new Vector3(32.4f, 21.35f, 0f), speed*Time.deltaTime);
+            if(Vector3.Distance(transform.position, new Vector3(32.4f, 21.35f, 0f)) < .1f) tagChar = '2';
+            break;
+          case '2':
+            transform.position = Vector3.MoveTowards(transform.position, new Vector3(32.87f, 2.59f, 0f), speed*Time.deltaTime);
+            if(Vector3.Distance(transform.position, new Vector3(32.87f, 2.59f, 0f)) < .5f) tagChar = '3';
+            break;
+          case '3':
+            transform.position = Vector3.MoveTowards(transform.position, new Vector3(21.9f, 6.45f, 0f), speed*Time.deltaTime);
+            if(Vector3.Distance(transform.position, new Vector3(21.9f, 6.45f, 0f)) < .5f) tagChar = '4';
+            break;
+          case '4':
+            transform.position = Vector3.MoveTowards(transform.position, new Vector3(10.93f, 11.67f, 0f), speed*Time.deltaTime);
+            if(Vector3.Distance(transform.position, new Vector3(10.93f, 11.67f, 0f)) < .5f) tagChar = '5';
+            break;
+          case '5':
+            transform.position = Vector3.MoveTowards(transform.position, new Vector3(10.52f, 27.38f, 0f), speed*Time.deltaTime);
+            if(Vector3.Distance(transform.position, new Vector3(10.52f, 27.38f, 0f)) < .5f) tagChar = '6';
+            break;
+          case '6':
+            transform.position = Vector3.MoveTowards(transform.position, new Vector3(22.31f, 27.65f, 0f), speed*Time.deltaTime);
+            if(Vector3.Distance(transform.position, new Vector3(22.31f, 27.65f, 0f)) < .5f) tagChar = '7';
+            break;
+          case '7':
+            transform.position = Vector3.MoveTowards(transform.position, new Vector3(17.7f, 19.79f, 0f), speed*Time.deltaTime);
+            if(Vector3.Distance(transform.position, new Vector3(17.7f, 19.79f, 0f)) < .5f) tagChar = '1';
+            break;
+        }
+                
+        anim.SetFloat("MoveX", Input.GetAxisRaw("Horizontal"));
+        anim.SetFloat("MoveY", Input.GetAxisRaw("Vertical"));
+        anim.SetBool("isMoving", isMoving);
+        anim.SetFloat("LastMoveX", lastMove.x);
+        anim.SetFloat("LastMoveY", lastMove.y);
+
+      }
     }
+
+    /*void OnTriggerEnter2D(Collider2D other) {
+      if(other.gameObject.CompareTag("dogPoint")) {
+        destPoint++;
+        currentPoint = points[destPoint];
+      }
+    }*/
 
     void GotoNextPoint()
     {
-        // if no points have been made
-        if (points.Length == 0)
-            return;
+        //transform.Translate(Vector3.up * Time.deltaTime * speed);
+        //transform.position = Vector3.MoveTowards(transform.position, points[destPoint].position, speed*Time.deltaTime);
 
-        // go to selected point
-        //agent.destination = points[destPoint].position;
 
-        //move to point
-        transform.Translate(Vector3.up * Time.deltaTime * speed);
+
+
 
         // choose next point, or cycle through
         //destPoint = (destPoint + 1) % points.Length;
 
-        if (Vector3.Distance(transform.position, currentPoint.position) < .1f)
+        /*if(Vector3.Distance(transform.position, currentPoint.position) < .1f)
         {
             if (destPoint + 1 < points.Length)
             {
                 destPoint++;
+                Debug.Log("Hit a sprite");
             }
             else
             {
                 destPoint = 0;
             }
             currentPoint = points[destPoint];
-        }
+        }*/
 
-        Vector3 pointDir = currentPoint.position - transform.position;
+        /*Vector3 pointDir = currentPoint.position - transform.position;
         float angle = Mathf.Atan2(pointDir.y, pointDir.x) * Mathf.Rad2Deg - 90f;
         Quaternion q = Quaternion.AngleAxis(angle, Vector3.forward);
         transform.rotation = Quaternion.RotateTowards(transform.rotation, q, 10f);
+        */
     }
 
     void stopMoving()
