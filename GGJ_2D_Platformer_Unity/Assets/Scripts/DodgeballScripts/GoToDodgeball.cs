@@ -20,17 +20,17 @@ public class GoToDodgeball : MonoBehaviour {
   void OnMouseDown() {
 
     if(player.progress < 3)
-      dMan.ShowBox("Jimmy: I hear Mrs. Lavery is having a yard sale!");
+      dMan.ShowBox("Jimmy: I hear Karen lost her dog!");
     else if(player.progress == 3) {
       dMan.ShowBox("Jimmy: I have something of yours! If you want it, you have to beat us in dodgeball!");
 
       // Wait until they press space
       while(!Input.GetKeyDown(KeyCode.Space)) {};
 
-      //SceneManager.LoadScene("DodgeballGame");
+      SceneManager.LoadScene("DodgeballGame");
     }
     else
-      dMan.ShowBox("Jimmy: Did you talk to Billy to get your item back?");
+      dMan.ShowBox("Jimmy: Thanks for playing us in dodgeball!");
 
   }
 }

@@ -5,39 +5,36 @@ using UnityEngine;
 public class DodgeballController : MonoBehaviour {
 
   public float speed; // Make this a negative number
-  public float delay; // For different levels
+  //public float delay; // For different levels
+  private Vector2 startPos;
 
-  public static int isStillPlaying;
+  public static bool isStillPlaying;
 
   private Rigidbody2D rb; // rigidBody of dodgeball
 
-  public GameObject startTile;
+  //public GameObject startTile;
 
   // Use this for initialization
   void Start () {
     StartCoroutine(delayBalls());
-
-    rb = GetComponent<Rigidbody2D>();
-    isStillPlaying = 1;
-
-    rb.velocity = new Vector2(speed, 0f);
+    startPos = transform.position;
   }
 
   IEnumerator delayBalls() {
-    yield return new WaitForSeconds(delay);
+    //yield return new WaitForSeconds(delay);
+
+    rb = GetComponent<Rigidbody2D>();
+    isStillPlaying = true;
+
+    rb.velocity = new Vector2(speed, 0f);
   }
 
   // Update is called once per frame
   void Update () {
-
-    if(isStillPlaying == 0)
+    if(!isStillPlaying)
       Destroy(gameObject);
 
-  }
-
-  // Once dodgeball leaves screen
-  void OnBecameInvisible() {
-    transform.position = startTile.transform.position;
-    rb.velocity = new Vector2(speed, 0f);
+    if(Mathf.Abs(startPoint.x - transform.position.x) > 38f)
+      transform.position = startPos;
   }
 }
