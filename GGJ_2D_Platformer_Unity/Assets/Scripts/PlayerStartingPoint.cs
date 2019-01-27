@@ -16,22 +16,22 @@ public class PlayerStartingPoint : MonoBehaviour {
 
   public Vector2 directionFacing;
 
+  public string pointName;
+
   // Use this for initialization
   void Start () {
     // move player to position of start point
     player = FindObjectOfType<PlayerController>();
-    player.transform.position = transform.position;
 
-    // Fix starting position depending on the starting block for each scene
-    player.lastMove = directionFacing;
+    if(player.startPoint == pointName) {
+      player.transform.position = transform.position;
 
-    // move camera to position of start point
-    camera = FindObjectOfType<CameraController>();
-    camera.transform.position = new Vector3(transform.position.x, transform.position.y, camera.transform.position.z);
-  }
+      // Fix starting position depending on the starting block for each scene
+      player.lastMove = directionFacing;
 
-  // Update is called once per frame
-  void Update () {
-
+      // move camera to position of start point
+      camera = FindObjectOfType<CameraController>();
+      camera.transform.position = new Vector3(transform.position.x, transform.position.y, camera.transform.position.z);
+    }
   }
 }

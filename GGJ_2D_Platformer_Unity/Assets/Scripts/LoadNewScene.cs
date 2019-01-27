@@ -14,15 +14,24 @@ public class LoadNewScene : MonoBehaviour {
 
   public string newScene;
 
+  public string exitPoint;
+
+  private PlayerController player;
+
   /*
   File => Build Settings
   Make sure Scenes are in Build
   */
 
+  void start() {
+    player = FindObjectOfType<PlayerController>();
+  }
+
   void OnTriggerEnter2D(Collider2D other) {
 
     if(other.gameObject.name == "Player") {
       SceneManager.LoadScene(newScene);
+      player.startPoint = exitPoint;
     }
   }
 }

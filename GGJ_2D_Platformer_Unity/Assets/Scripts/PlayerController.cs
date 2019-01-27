@@ -11,13 +11,15 @@ public class PlayerController : MonoBehaviour {
 
   public float moveSpeed;
   public Vector2 lastMove;
+  private bool isMoving;
 
-  //private Vector3 pos;
-
+  // User's progress throughout the game
   public int progress;
 
   // static in Unity is a powerful & beautiful thing
   private static bool playerExists;
+
+  public string startPoint;
 
   private Rigidbody2D rb;
   //private Animator anim;
@@ -25,22 +27,17 @@ public class PlayerController : MonoBehaviour {
   void Start () {
     //anim = GetComponent<Animator>();
     rb = GetComponent<Rigidbody2D>();
-    progress = 0;
     //pos = transform.position;
-
-    /*if(!playerExists) {
+    //DontDestroyOnLoad(transform.gameObject);
+    if(!playerExists) {
       playerExists = true;
       // So that player exists when switching between scenes/levels
       DontDestroyOnLoad(transform.gameObject);
     }
     else { // To destroy duplicates
       Destroy(gameObject);
-    }*/
+    }
   }
-
-  /*
-  */
-  private bool isMoving;
 
   void Update() {
     isMoving = false;
