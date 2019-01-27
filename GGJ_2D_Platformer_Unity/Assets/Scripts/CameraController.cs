@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 /*
 Thomas Maher
@@ -16,7 +18,7 @@ public class CameraController : MonoBehaviour {
   public float moveSpeed; // How fast we want camera to move. 5 is roughly a good value (maybe a little less)
 
   void start() {
-    //DontDestroyOnLoad(transform.gameObject);
+        //DontDestroyOnLoad(transform.gameObject);
 
     if(!cameraExists) {
       cameraExists = true;
@@ -28,10 +30,9 @@ public class CameraController : MonoBehaviour {
     }
   }
 
-  void Update() {
-
-    playerPos = new Vector3(player.transform.position.x, player.transform.position.y, transform.position.z);
-
-    transform.position = Vector3.Lerp(transform.position, playerPos, moveSpeed * Time.deltaTime); // Camera follows the player but 6 to the right
-  }
+  void Update() 
+    {
+        playerPos = new Vector3(player.transform.position.x, player.transform.position.y, transform.position.z);
+        transform.position = Vector3.Lerp(transform.position, playerPos, moveSpeed * Time.deltaTime); // Camera follows the player but 6 to the right
+    }
 }
