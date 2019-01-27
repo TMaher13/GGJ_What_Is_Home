@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class GoToDodgeball : MonoBehaviour
 {
 
-    private DialogueController dMan;
+    //private DialogueController dMan;
     private PlayerController player;
 
     // Which stage the player is at in the game
@@ -15,26 +15,26 @@ public class GoToDodgeball : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        dMan = FindObjectOfType<DialogueController>();
+       // dMan = FindObjectOfType<DialogueController>();
         player = FindObjectOfType<PlayerController>();
     }
 
-    void OnMouseDown()
+    void OnTriggerEnter2D()
     {
 
-        if (player.progress < 3)
-            dMan.ShowBox("Jimmy: I hear Karen lost her dog!");
-        else if (player.progress == 3)
-        {
-            dMan.ShowBox("Jimmy: I have something of yours! If you want it, you have to beat us in dodgeball!");
+        //if (player.progress < 3)
+            //dMan.ShowBox("Jimmy: I hear Karen lost her dog!");
+        //else if (player.progress == 3)
+       // {
+            //dMan.ShowBox("Jimmy: I have something of yours! If you want it, you have to beat us in dodgeball!");
 
             // Wait until they press space
-            while (!Input.GetKeyDown(KeyCode.Space)) { };
+            //while (!Input.GetKeyDown(KeyCode.Space)) { };
 
             SceneManager.LoadScene("DodgeballGame");
-        }
-        else
-            dMan.ShowBox("Jimmy: Thanks for playing us in dodgeball!");
+       // }
+       // else
+            //dMan.ShowBox("Jimmy: Thanks for playing us in dodgeball!");
 
     }
 }

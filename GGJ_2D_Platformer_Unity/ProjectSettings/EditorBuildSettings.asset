@@ -14,4 +14,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/NeighborhoodScene.unity
     guid: b04789452ee04c342bd578eec772843d
+  - enabled: 1
+    path: Assets/Scenes/EndScene.unity
+    guid: feae310cfd70bba4a8e7f88b94b2a50b
+  - enabled: 1
+    path: Assets/Scenes/DodgeballGame.unity
+    guid: d06bcc0da85b34c04a21dbfc33daf754
   m_configObjects: {}
