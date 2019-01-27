@@ -2,42 +2,47 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DodgeballController : MonoBehaviour {
+public class DodgeballController : MonoBehaviour
+{
 
-  public float speed; // Make this a negative number
-  public float delay; // For different levels
+    public float speed; // Make this a negative number
+                        //public float delay; // For different levels
+    private Vector2 startPos;
 
-  public static int isStillPlaying;
+    public bool isStillPlaying;
 
-  private Rigidbody2D rb; // rigidBody of dodgeball
+    public static bool isStillPlaying2;
 
-  public GameObject startTile;
+    private Rigidbody2D rb; // rigidBody of dodgeball
 
-  // Use this for initialization
-  void Start () {
-    StartCoroutine(delayBalls());
+    public Vector2 startTile;
 
-    rb = GetComponent<Rigidbody2D>();
-    isStillPlaying = 1;
+    // Use this for initialization
+    void Start()
+    {
+        startPos = transform.position;
 
-    rb.velocity = new Vector2(speed, 0f);
-  }
+        rb = GetComponent<Rigidbody2D>();
+        isStillPlaying = true;
+        isStillPlaying2 = true;
 
-  IEnumerator delayBalls() {
-    yield return new WaitForSeconds(delay);
-  }
+        rb.velocity = new Vector2(speed, 0f);
 
-  // Update is called once per frame
-  void Update () {
+    }
 
-    if(isStillPlaying == 0)
-      Destroy(gameObject);
+    // Update is called once per frame
+    void Update()
+    {
+        //isStillPlaying2 = isStillPlaying;
 
-  }
+        if (!isStillPlaying2)
+            Destroy(gameObject);
 
-  // Once dodgeball leaves screen
-  void OnBecameInvisible() {
-    transform.position = startTile.transform.position;
-    rb.velocity = new Vector2(speed, 0f);
-  }
+        if (Mathf.Abs(startPos.x - transform.position.x) > 32f)
+        {
+            Debug.Log(startTile);
+            transform.position = startTile + new Vector2(4,2);
+            rb.velocity = new Vector2(speed, 0f);
+        }
+    }
 }
