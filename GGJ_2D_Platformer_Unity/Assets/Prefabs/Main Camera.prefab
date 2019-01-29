@@ -103,6 +103,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   moveSpeed: 5
+  boundBox: {fileID: 0}
 --- !u!114 &114251903197430366
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -116,3 +117,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   moveSpeed: 1
+  boundBox: {fileID: 0}

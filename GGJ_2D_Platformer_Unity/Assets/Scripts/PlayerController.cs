@@ -4,7 +4,8 @@ using UnityEngine;
 
 /*
 Thomas Maher
-1/25/2019
+
+Updated 1/29/2019
 */
 
 public class PlayerController : MonoBehaviour {
@@ -26,11 +27,8 @@ public class PlayerController : MonoBehaviour {
 
   void Start () {
     anim = GetComponent<Animator>();
-        
     rb = GetComponent<Rigidbody2D>();
 
-    //pos = transform.position;
-    //DontDestroyOnLoad(transform.gameObject);
     if(!playerExists) {
       playerExists = true;
       // So that player exists when switching between scenes/levels
@@ -68,36 +66,12 @@ public class PlayerController : MonoBehaviour {
       rb.velocity = new Vector2(rb.velocity.x, 0f);
     }
 
-    
+
     anim.SetFloat("MoveX", Input.GetAxisRaw("Horizontal"));
     anim.SetFloat("MoveY", Input.GetAxisRaw("Vertical"));
     anim.SetBool("isMoving", isMoving);
     anim.SetFloat("LastMoveX", lastMove.x);
     anim.SetFloat("LastMoveY", lastMove.y);
-    
+
   }
-
-
-  /*void FixedUpdate () {
-    if(Input.GetKey(KeyCode.A) && transform.position == pos) {// Left
-      //pos += Vector3.left;
-      transform.Translate(Vector2.left*moveSpeed*Time.deltaTime);
-    }
-    if(Input.GetKey(KeyCode.D) && transform.position == pos) { // Right
-      //pos += Vector3.right;
-      transform.Translate(Vector2.right*moveSpeed*Time.deltaTime);
-    }
-    if(Input.GetKey(KeyCode.W) && transform.position == pos) { // Up
-      //pos += Vector3.up;
-      transform.Translate(Vector2.up*moveSpeed*Time.deltaTime);
-    }
-    if(Input.GetKey(KeyCode.S) && transform.position == pos) { // Down
-      //pos += Vector3.down;
-      transform.Translate(Vector2.down*moveSpeed*Time.deltaTime);
-    }
-
-    transform.position = Vector3.MoveTowards(transform.position, pos, Time.deltaTime * moveSpeed);    // Move there
-    pos = transform.position;
-  }*/
-
 }

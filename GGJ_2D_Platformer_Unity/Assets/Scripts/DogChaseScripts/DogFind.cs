@@ -27,10 +27,11 @@ public class DogFind : MonoBehaviour
       if(Vector3.Distance(transform.position, player.transform.position) > 1.2f)
         transform.position = Vector2.MoveTowards(transform.position, target.position, 2*Time.deltaTime);
 
-      if(player.transform.position.x > transform.position.x)
-        doggoSprite.flipX = false;
-      else
+      if(player.transform.position.x < transform.position.x)
         doggoSprite.flipX = true;
+      else
+        doggoSprite.flipX = false;
+
     }
   }
 

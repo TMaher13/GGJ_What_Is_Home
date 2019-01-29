@@ -8,7 +8,7 @@ public class CompleteDodgeballChallenge : MonoBehaviour
 
     private PlayerController player;
 
-    void start()
+    void Start()
     {
         player = FindObjectOfType<PlayerController>();
     }
@@ -17,8 +17,9 @@ public class CompleteDodgeballChallenge : MonoBehaviour
     {
         if (other.gameObject.name == "Player")
         {
+          if(player.progress < 2)
             player.progress++; // update player progress
-            SceneManager.LoadScene("Neighborhood");
+          SceneManager.LoadScene("Neighborhood");
         }
     }
 }

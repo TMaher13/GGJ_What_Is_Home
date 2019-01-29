@@ -2,6 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/*
+Thomas Maher
+
+Updated 1/29/19
+*/
+
 public class DodgeballController : MonoBehaviour
 {
 
@@ -40,9 +46,17 @@ public class DodgeballController : MonoBehaviour
 
         if (Mathf.Abs(startPos.x - transform.position.x) > 32f)
         {
-            Debug.Log(startTile);
+            //Debug.Log(startTile);
             transform.position = startTile + new Vector2(4,2);
             rb.velocity = new Vector2(speed, 0f);
+        }
+    }
+
+    void OnCollisionEnter2D(Collision2D collisionInfo)
+    {
+        if (collisionInfo.collider.tag == "Player") {
+          transform.position = startTile + new Vector2(4,2);
+          rb.velocity = new Vector2(speed, 0f);
         }
     }
 }

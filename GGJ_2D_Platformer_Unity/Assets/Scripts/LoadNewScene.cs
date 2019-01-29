@@ -17,6 +17,7 @@ public class LoadNewScene : MonoBehaviour {
   public string exitPoint;
 
   private PlayerController player;
+  private DialogueController dMan;
 
   /*
   File => Build Settings
@@ -25,13 +26,20 @@ public class LoadNewScene : MonoBehaviour {
 
   void Start() {
     player = FindObjectOfType<PlayerController>();
+    dMan = FindObjectOfType<DialogueController>();
   }
 
   void OnTriggerEnter2D(Collider2D other) {
 
     if(other.gameObject.name == "Player") {
-      SceneManager.LoadScene(newScene);
-      player.startPoint = exitPoint;
+
+      if(newScene == "EndScene" && player.progress != 2) {
+        dMan.ShowBox("Wait! You haven't finished all the challenges yet!");
+      }
+      else {
+        SceneManager.LoadScene(newScene);
+        player.startPoint = exitPoint;
+      }
     }
   }
 }

@@ -30,6 +30,7 @@ public class DialogueController : MonoBehaviour {
   }
 
   public void ShowBox(string dialogue) {
+    Debug.Log("Got to dialogue");
     dialogueActive = true;
     dBox.SetActive(true);
     dText.text = dialogue;
