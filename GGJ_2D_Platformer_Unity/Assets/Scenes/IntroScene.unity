@@ -7446,6 +7446,8 @@ GameObject:
   m_Component:
   - component: {fileID: 760580277}
   - component: {fileID: 760580276}
+  - component: {fileID: 760580278}
+  - component: {fileID: 760580279}
   m_Layer: 0
   m_Name: GuyDownIdle (22)
   m_TagString: Untagged
@@ -7513,6 +7515,43 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -9.743}
+--- !u!114 &760580278
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 760580275}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5637dd30f236cb74b9e407c28b2425ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue: 'Suspicious kid: You don''t see me!'
+--- !u!61 &760580279
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 760580275}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.63, y: 1}
+    newSize: {x: 0.63, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.63, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &795616638
 GameObject:
   m_ObjectHideFlags: 0
@@ -7571,6 +7610,8 @@ GameObject:
   m_Component:
   - component: {fileID: 888213826}
   - component: {fileID: 888213825}
+  - component: {fileID: 888213827}
+  - component: {fileID: 888213828}
   m_Layer: 0
   m_Name: GuyDownIdle (21)
   m_TagString: Untagged
@@ -7638,6 +7679,43 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 15.668001}
+--- !u!114 &888213827
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 888213824}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5637dd30f236cb74b9e407c28b2425ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue: 'Suspicious kid: Heheheh'
+--- !u!61 &888213828
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 888213824}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.63, y: 1}
+    newSize: {x: 0.63, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.63, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &895489871
 GameObject:
   m_ObjectHideFlags: 0
@@ -8039,6 +8117,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1282105083}
   - component: {fileID: 1282105082}
+  - component: {fileID: 1282105084}
+  - component: {fileID: 1282105085}
   m_Layer: 0
   m_Name: GuyDownIdle (20)
   m_TagString: Untagged
@@ -8106,6 +8186,43 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 15.668001}
+--- !u!114 &1282105084
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1282105081}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5637dd30f236cb74b9e407c28b2425ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue: 'Suspicious kid: Shh! I''m hiding!'
+--- !u!61 &1282105085
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1282105081}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.63, y: 1}
+    newSize: {x: 0.63, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.63, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &1327393643
 GameObject:
   m_ObjectHideFlags: 0

@@ -15,11 +15,9 @@ public class CompleteDodgeballChallenge : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.name == "Player")
-        {
+        if (other.gameObject.name == "Player") {
           if(player.progress < 2)
             player.progress++; // update player progress
-          SceneManager.LoadScene("Neighborhood");
         }
     }
 }

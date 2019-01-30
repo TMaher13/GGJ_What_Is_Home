@@ -25,7 +25,7 @@ public class GoToDodgeball : MonoBehaviour {
       sendToGame = false;
     }
 
-    void OnTriggerEnter2D() {
+    void OnMouseDown() {
       if(player.progress < 2) {
         dMan.ShowBox("Jimmy: I have something of yours! If you want it, you have to beat us in dodgeball!");
         sendToGame = true;
@@ -35,18 +35,10 @@ public class GoToDodgeball : MonoBehaviour {
     }
 
     void Update() {
-      if(sendToGame) {
-        StartCoroutine("WaitForDodgeball");
+      if(sendToGame && Input.GetKeyDown(KeyCode.Return)) {
+        //StartCoroutine("WaitForDodgeball");
+        SceneManager.LoadScene("DodgeballGame");
+        player.transform.position = new Vector2(1.5f, -10.5f);
       }
-    }
-
-    IEnumerator WaitForDodgeball() {
-
-      while(!Input.GetKeyDown(KeyCode.Return)) {
-        yield return null;
-      }
-
-      SceneManager.LoadScene("DodgeballGame");
-      player.transform.position = new Vector2(1.5f, -10.5f);
     }
 }

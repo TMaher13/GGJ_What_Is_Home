@@ -34,7 +34,10 @@ public class LoadNewScene : MonoBehaviour {
     if(other.gameObject.name == "Player") {
 
       if(newScene == "EndScene" && player.progress != 2) {
-        dMan.ShowBox("Wait! You haven't finished all the challenges yet!");
+        dMan.ShowBox("Wait! You can\'t leave those kids without playing them in dodgeball!");
+      }
+      else if(newScene == "NeighborhoodScene" && player.progress != 1) {
+        dMan.ShowBox("Wait! I think someone might need your help!");
       }
       else {
         SceneManager.LoadScene(newScene);

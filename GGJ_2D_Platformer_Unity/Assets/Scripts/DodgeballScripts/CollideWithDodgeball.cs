@@ -15,6 +15,13 @@ public class CollideWithDodgeball : MonoBehaviour {
       dMan = FindObjectOfType<DialogueController>();
     }
 
+    void Update() {
+      if(dMan == null) {
+         // Need to re-find dialogue manager for dodgeball scene
+        dMan = FindObjectOfType<DialogueController>();
+      }
+    }
+
     void OnCollisionEnter2D(Collision2D collisionInfo)
     {
         if (collisionInfo.collider.tag == "Dodgeball") {

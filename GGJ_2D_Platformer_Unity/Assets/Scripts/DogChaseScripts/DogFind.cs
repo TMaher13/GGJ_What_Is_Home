@@ -8,30 +8,35 @@ public class DogFind : MonoBehaviour
     public float speed;
     public float stopDist;
 
+    private Animator anim;
+
     private PlayerController player;
     private DogController doggo;
     private SpriteRenderer doggoSprite;
+    //private Rigidbody2D rb;
 
-  // Use this for initialization
   void Start () {
-
-    doggo = GetComponent<DogController>();
+    doggo = FindObjectOfType<DogController>();
     player = FindObjectOfType<PlayerController>();
+    anim = GetComponent<Animator>();
     doggoSprite = GetComponent<SpriteRenderer>();
-
+    //rb = GetComponent<Rigidbody2D>();
   }
 
-  // Update is called once per frame
   void Update () {
     if(doggo.isFound) {
-      if(Vector3.Distance(transform.position, player.transform.position) > 1.2f)
+      if(Vector3.Distance(transform.position, player.transform.position) > 1.2f) {
         transform.position = Vector2.MoveTowards(transform.position, target.position, 2*Time.deltaTime);
 
-      if(player.transform.position.x < transform.position.x)
-        doggoSprite.flipX = true;
-      else
-        doggoSprite.flipX = false;
+        anim.SetFloat("MoveX", transform.position.x - player.transform.position.x);
+        //anim.SetFloat("MoveY", moveY);
+        anim.SetBool("isMoving", true);
+      }
 
+      //if(rb.velocity.x < 0)
+        //doggoSprite.flipX = true;
+      //else
+        //doggoSprite.flipX = false;
     }
   }
 
@@ -43,6 +48,7 @@ public class DogFind : MonoBehaviour
           //Invoke("DogController.stopMoving()", 0f);
           if(Vector2.Distance(transform.position, target.position) > stopDist)
             transform.position = Vector2.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
+          doggoSprite.flipX = true;
         }
     }
 }

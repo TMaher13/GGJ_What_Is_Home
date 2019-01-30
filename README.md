@@ -1,10 +1,11 @@
 # GGJ_2D_Platformer
-Our Unity game built for Global Game Jam 2019
 
-Animators:
-
-    Bethany Lavery, Christian Schroeder
+Story-based adventure game built for the 2019 Global Game Jam. The player needs to find his way home, and complete some challenges along the way. What will he find on his journey?
 
 Programmers:
 
     Thomas Maher, Tariq Rakha, Joey Rodgers
+
+Animators:
+
+    Bethany Lavery, Christian Schroeder

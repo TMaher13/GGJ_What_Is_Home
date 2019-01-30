@@ -361,6 +361,7 @@ GameObject:
   - component: {fileID: 90272640}
   - component: {fileID: 90272639}
   - component: {fileID: 90272638}
+  - component: {fileID: 90272641}
   m_Layer: 0
   m_Name: NPC12
   m_TagString: Untagged
@@ -452,6 +453,18 @@ Transform:
   m_Father: {fileID: 1245187071}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &90272641
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 90272637}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5637dd30f236cb74b9e407c28b2425ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue: 'Chef Lisa: I cook some mean empanadas'
 --- !u!1 &158474751
 GameObject:
   m_ObjectHideFlags: 0
@@ -567,6 +580,7 @@ GameObject:
   - component: {fileID: 166945121}
   - component: {fileID: 166945120}
   - component: {fileID: 166945119}
+  - component: {fileID: 166945122}
   m_Layer: 0
   m_Name: NPC6
   m_TagString: Untagged
@@ -658,6 +672,18 @@ Transform:
   m_Father: {fileID: 1245187071}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &166945122
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 166945118}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5637dd30f236cb74b9e407c28b2425ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue: 'Steven: Sorry Glenn... She was one of the pretty NPCs too'
 --- !u!1 &198427357
 GameObject:
   m_ObjectHideFlags: 0
@@ -1162,6 +1188,8 @@ GameObject:
   m_Component:
   - component: {fileID: 360657825}
   - component: {fileID: 360657826}
+  - component: {fileID: 360657827}
+  - component: {fileID: 360657828}
   m_Layer: 0
   m_Name: GuyDownIdle (22)
   m_TagString: Untagged
@@ -1229,6 +1257,43 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &360657827
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 360657824}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5637dd30f236cb74b9e407c28b2425ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue: 'Suspicious kid: Don''t mess with me!'
+--- !u!61 &360657828
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 360657824}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.63, y: 1}
+    newSize: {x: 0.63, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.63, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &364287788
 GameObject:
   m_ObjectHideFlags: 0
@@ -1834,6 +1899,7 @@ GameObject:
   - component: {fileID: 613294827}
   - component: {fileID: 613294826}
   - component: {fileID: 613294825}
+  - component: {fileID: 613294828}
   m_Layer: 0
   m_Name: NPC4
   m_TagString: Untagged
@@ -1919,12 +1985,24 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 613294824}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.456666, y: 12.225546, z: -0.7589283}
+  m_LocalPosition: {x: 3.84, y: 7.89, z: -0.7589283}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1245187071}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &613294828
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 613294824}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5637dd30f236cb74b9e407c28b2425ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue: 'Emily: Oh no not this again...'
 --- !u!1 &621418264
 GameObject:
   m_ObjectHideFlags: 0
@@ -2053,6 +2131,7 @@ GameObject:
   - component: {fileID: 624306025}
   - component: {fileID: 624306024}
   - component: {fileID: 624306023}
+  - component: {fileID: 624306026}
   m_Layer: 0
   m_Name: NPC8
   m_TagString: Untagged
@@ -2144,6 +2223,18 @@ Transform:
   m_Father: {fileID: 1245187071}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &624306026
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 624306022}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5637dd30f236cb74b9e407c28b2425ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue: Have you seen my calculator? I think I dropped it around here...
 --- !u!1 &667560628
 GameObject:
   m_ObjectHideFlags: 0
@@ -2292,6 +2383,8 @@ GameObject:
   m_Component:
   - component: {fileID: 696200834}
   - component: {fileID: 696200835}
+  - component: {fileID: 696200836}
+  - component: {fileID: 696200837}
   m_Layer: 0
   m_Name: GuyDownIdle (21)
   m_TagString: Untagged
@@ -2359,6 +2452,43 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &696200836
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 696200833}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5637dd30f236cb74b9e407c28b2425ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue: 'Suspicious kid: Quiet! I''m on a mission!'
+--- !u!61 &696200837
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 696200833}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.63, y: 1}
+    newSize: {x: 0.63, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.63, y: 1}
+  m_EdgeRadius: 0
 --- !u!1001 &723163357
 Prefab:
   m_ObjectHideFlags: 0
@@ -37383,6 +37513,7 @@ GameObject:
   - component: {fileID: 725763051}
   - component: {fileID: 725763050}
   - component: {fileID: 725763049}
+  - component: {fileID: 725763052}
   m_Layer: 0
   m_Name: NPC9
   m_TagString: Untagged
@@ -37474,6 +37605,18 @@ Transform:
   m_Father: {fileID: 1245187071}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &725763052
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 725763048}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5637dd30f236cb74b9e407c28b2425ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue: 'Mark: I''m so glad you came to the river with me today Jessica'
 --- !u!1 &746464821
 GameObject:
   m_ObjectHideFlags: 0
@@ -37694,6 +37837,7 @@ GameObject:
   - component: {fileID: 815214222}
   - component: {fileID: 815214221}
   - component: {fileID: 815214220}
+  - component: {fileID: 815214223}
   m_Layer: 0
   m_Name: NPC5
   m_TagString: Untagged
@@ -37785,6 +37929,18 @@ Transform:
   m_Father: {fileID: 1245187071}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &815214223
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 815214219}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5637dd30f236cb74b9e407c28b2425ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue: 'Gloomy Glenn: I can''t believe she left me for Mark...'
 --- !u!1 &815406480
 GameObject:
   m_ObjectHideFlags: 0
@@ -37794,6 +37950,8 @@ GameObject:
   m_Component:
   - component: {fileID: 815406481}
   - component: {fileID: 815406482}
+  - component: {fileID: 815406483}
+  - component: {fileID: 815406484}
   m_Layer: 0
   m_Name: GuyDownIdle (23)
   m_TagString: Untagged
@@ -37861,6 +38019,43 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &815406483
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 815406480}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5637dd30f236cb74b9e407c28b2425ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue: 'Suspicious kid: Don''t look this way!!'
+--- !u!61 &815406484
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 815406480}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.63, y: 1}
+    newSize: {x: 0.63, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.63, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &881953410
 GameObject:
   m_ObjectHideFlags: 0
@@ -38177,6 +38372,23 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1964946105962aa4cb787d672c47dd19, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1 &942186722 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1803942016812830, guid: 1964946105962aa4cb787d672c47dd19,
+    type: 2}
+  m_PrefabInternal: {fileID: 942186721}
+--- !u!114 &942186723
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 942186722}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5637dd30f236cb74b9e407c28b2425ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue: Engineering is driving me insane...
 --- !u!1 &943301746
 GameObject:
   m_ObjectHideFlags: 0
@@ -38614,6 +38826,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1063844385}
   - component: {fileID: 1063844386}
+  - component: {fileID: 1063844387}
+  - component: {fileID: 1063844388}
   m_Layer: 0
   m_Name: GuyDownIdle (20)
   m_TagString: Untagged
@@ -38681,6 +38895,43 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1063844387
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1063844384}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5637dd30f236cb74b9e407c28b2425ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue: 'Suspicious kid: *giggles*'
+--- !u!61 &1063844388
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1063844384}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.63, y: 1}
+    newSize: {x: 0.63, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.63, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &1085814993
 GameObject:
   m_ObjectHideFlags: 0
@@ -39551,6 +39802,7 @@ GameObject:
   - component: {fileID: 1357947127}
   - component: {fileID: 1357947126}
   - component: {fileID: 1357947125}
+  - component: {fileID: 1357947128}
   m_Layer: 0
   m_Name: NPC11
   m_TagString: Untagged
@@ -39617,7 +39869,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300004, guid: d18c564ddb9f342478d7a037aa144c1d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -39642,6 +39894,18 @@ Transform:
   m_Father: {fileID: 1245187071}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1357947128
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1357947124}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5637dd30f236cb74b9e407c28b2425ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue: I wish I knew how to cook...
 --- !u!1 &1411756293
 GameObject:
   m_ObjectHideFlags: 0
@@ -40045,6 +40309,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1560933785}
   - component: {fileID: 1560933786}
+  - component: {fileID: 1560933787}
+  - component: {fileID: 1560933788}
   m_Layer: 0
   m_Name: GuyDownIdle (24)
   m_TagString: Untagged
@@ -40112,6 +40378,43 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1560933787
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1560933784}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5637dd30f236cb74b9e407c28b2425ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue: 'Suspicious kid: You''ll never see it coming!'
+--- !u!61 &1560933788
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1560933784}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.63, y: 1}
+    newSize: {x: 0.63, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.63, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &1566645546
 GameObject:
   m_ObjectHideFlags: 0
@@ -40339,6 +40642,7 @@ GameObject:
   - component: {fileID: 1619394990}
   - component: {fileID: 1619394989}
   - component: {fileID: 1619394988}
+  - component: {fileID: 1619394991}
   m_Layer: 0
   m_Name: NCP2
   m_TagString: Untagged
@@ -40430,6 +40734,18 @@ Transform:
   m_Father: {fileID: 1245187071}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1619394991
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1619394987}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5637dd30f236cb74b9e407c28b2425ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue: 'Young chef Chris: Yeah.. uh, thanks... Yeah I definitely made it myself..'
 --- !u!1 &1699208932
 GameObject:
   m_ObjectHideFlags: 0
@@ -40772,6 +41088,7 @@ GameObject:
   - component: {fileID: 1768724553}
   - component: {fileID: 1768724552}
   - component: {fileID: 1768724551}
+  - component: {fileID: 1768724554}
   m_Layer: 0
   m_Name: NCP1
   m_TagString: Untagged
@@ -40838,7 +41155,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300004, guid: d18c564ddb9f342478d7a037aa144c1d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -40863,6 +41180,18 @@ Transform:
   m_Father: {fileID: 1245187071}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1768724554
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1768724550}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5637dd30f236cb74b9e407c28b2425ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue: 'Kendrick: Thanks for making sushi the other night! It was amazing!'
 --- !u!1 &1777630492
 GameObject:
   m_ObjectHideFlags: 0
@@ -41196,6 +41525,7 @@ GameObject:
   - component: {fileID: 1880409143}
   - component: {fileID: 1880409142}
   - component: {fileID: 1880409141}
+  - component: {fileID: 1880409144}
   m_Layer: 0
   m_Name: NPC7
   m_TagString: Untagged
@@ -41287,6 +41617,19 @@ Transform:
   m_Father: {fileID: 1245187071}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1880409144
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1880409140}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5637dd30f236cb74b9e407c28b2425ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue: If I swam away down this river I would I never have to do engineering
+    work again
 --- !u!1 &1904248846
 GameObject:
   m_ObjectHideFlags: 0
@@ -41507,6 +41850,7 @@ GameObject:
   - component: {fileID: 1919772460}
   - component: {fileID: 1919772459}
   - component: {fileID: 1919772458}
+  - component: {fileID: 1919772461}
   m_Layer: 0
   m_Name: NPC3
   m_TagString: Untagged
@@ -41592,12 +41936,24 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1919772457}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.81666565, y: 12.215546, z: -0.7589283}
+  m_LocalPosition: {x: 3.23, y: 7.88, z: -0.7589283}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1245187071}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1919772461
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1919772457}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5637dd30f236cb74b9e407c28b2425ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue: 'Nerdy Ned: Hey uh, I kinda like you..'
 --- !u!1 &1929794676
 GameObject:
   m_ObjectHideFlags: 0
@@ -42137,6 +42493,7 @@ GameObject:
   - component: {fileID: 2079350240}
   - component: {fileID: 2079350239}
   - component: {fileID: 2079350238}
+  - component: {fileID: 2079350241}
   m_Layer: 0
   m_Name: NPC10
   m_TagString: Untagged
@@ -42228,6 +42585,18 @@ Transform:
   m_Father: {fileID: 1245187071}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2079350241
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2079350237}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5637dd30f236cb74b9e407c28b2425ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue: 'Jessica: *giggles* I''m so glad you finally decided to take me here!'
 --- !u!1 &2107681036
 GameObject:
   m_ObjectHideFlags: 0
