@@ -12,19 +12,13 @@ public class MainMenu : MonoBehaviour {
 
     public Button NewGameButton;
 
-	// Use this for initialization
-	void Start () {
-        NewGameButton.onClick.AddListener(startNewGame);
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+  // Use this for initialization
+  void Start () {
+    NewGameButton.onClick.AddListener(startNewGame);
+  }
 
-    void startNewGame()
-    {
-        SceneManager.LoadScene(sceneName: "IntroScene");
-        gameStarted = true;
-    }
+  void startNewGame() {
+    SceneManager.LoadScene(sceneName: "IntroScene");
+    gameStarted = true;
+  }
 }

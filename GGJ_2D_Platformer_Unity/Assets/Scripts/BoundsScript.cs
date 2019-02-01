@@ -13,7 +13,6 @@ public class BoundsScript : MonoBehaviour {
   private BoxCollider2D bounds;
   private CameraController camera;
 
-  // Use this for initialization
   void Start () {
     bounds = GetComponent<BoxCollider2D>();
     camera = FindObjectOfType<CameraController>();
