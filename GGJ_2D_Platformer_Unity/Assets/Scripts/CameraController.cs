@@ -12,6 +12,7 @@ public class CameraController : MonoBehaviour {
 
   private static bool cameraExists;
 
+  public GameObject PauseUI;
   public GameObject player;
   private Vector3 playerPos;
   public float moveSpeed; // How fast we want camera to move. 5 is roughly a good value (maybe a little less)
@@ -30,10 +31,12 @@ public class CameraController : MonoBehaviour {
     if(!cameraExists) {
       cameraExists = true;
       // So that player exists when switching between scenes/levels
+      DontDestroyOnLoad(PauseUI);
       DontDestroyOnLoad(transform.gameObject);
     }
     else { // To destroy duplicates
       Destroy(gameObject);
+      Destroy(PauseUI);
     }
 
     minBounds = boundBox.bounds.min;

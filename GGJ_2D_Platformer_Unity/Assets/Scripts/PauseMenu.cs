@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEditor;
 
 public class PauseMenu : MonoBehaviour {
 
@@ -35,6 +36,7 @@ public class PauseMenu : MonoBehaviour {
 
   public void ResumeGame() {
     isPaused = false;
+    Debug.Log("Resume clicked");
   }
 
   public void GoToMainMenu() {
@@ -44,6 +46,7 @@ public class PauseMenu : MonoBehaviour {
   }
 
   public void QuitGame() {
+    EditorApplication.isPlaying = false;
     Application.Quit();
   }
 }
